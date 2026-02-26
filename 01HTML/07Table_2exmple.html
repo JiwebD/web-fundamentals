@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>테이블 예제 - thead, tbody, tfoot</title>
+<style>
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 50px auto;
+    table-layout: fixed;
+  }
+  thead th {
+    background-color: rosybrown;
+    color: white;
+    height: 40px;
+    position: sticky;
+    top: 0; /* 스크롤 시 헤더 고정 */
+  }
+  tbody td {
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+    height: 30px;
+  }
+  tfoot td {
+    background-color: orange;
+    font-weight: bold;
+    text-align: center;
+    height: 35px;
+    position: sticky;
+    bottom: 0; /* 스크롤 시 푸터 고정 */
+  }
+  th, td {
+    border: 1px solid #000;
+  }
+  tbody {
+    display: block;
+    max-height: 150px;
+    overflow-y: auto; /* 스크롤 가능 */
+  }
+  thead, tfoot {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center;">장바구니 예제</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>상품명</th>
+      <th>가격</th>
+      <th>수량</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>사과</td><td>1000</td><td>2</td></tr>
+    <tr><td>바나나</td><td>2000</td><td>1</td></tr>
+    <tr><td>딸기</td><td>3000</td><td>5</td></tr>
+    <tr><td>포도</td><td>4000</td><td>2</td></tr>
+    <tr><td>오렌지</td><td>1500</td><td>3</td></tr>
+    <tr><td>수박</td><td>5000</td><td>1</td></tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">총합계</td>
+      <td>17500</td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>
